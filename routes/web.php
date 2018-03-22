@@ -15,11 +15,12 @@
     return view('welcome');
 });*/
 
-/*Auth::routes();
+//Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('home');*/
+Route::get('/login',['uses'=>'Auth\MyAuthController@showLogin']);
+Route::post('/login',['uses'=>'Auth\MyAuthController@authenticate']);
 
-Auth::routes();
+//Route::get('/', 'HomeController@index')->name('home');
 
 Route::group(['prefix'=>'admin', 'middleware'=>['web']], function(){
 
@@ -29,3 +30,8 @@ Route::group(['prefix'=>'admin', 'middleware'=>['web']], function(){
 });
 
 //Route::get('/', 'HomeController@index')->name('home');
+
+/*Route::group(['prefix'=>'admin', 'middleware'=>['web']], function(){
+
+
+});*/

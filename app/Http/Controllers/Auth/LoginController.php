@@ -25,7 +25,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/1123';
+    protected $redirectTo = '/home';
 
     public function username()
     {
